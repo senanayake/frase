@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "my-next-lesson",
+  "title": "My next lesson",
+  "tenses": [
+    {
+      "id": "conditional",
+      "label": "Conditional",
+      "spanish": "Condicional simple",
+      "description": "Polite requests and hypothetical situations.",
+      "example": "Me gustaría un café.",
+      "rule": "Add conditional endings to the infinitive or irregular stem."
+    }
+  ],
+  "cards": [
+    {
+      "id": "polite-coffee",
+      "tense": "conditional",
+      "type": "translate",
+      "prompt": "I would like a coffee.",
+      "instruction": "Use gustar in the conditional.",
+      "answers": [
+        "Me gustaría un café."
+      ],
+      "sample": "Me gustaría un café.",
+      "hint": "Use me + gustaría.",
+      "explanation": "Me gustaría is a common polite way to say I would like.",
+      "hints": [
+        "Think of a polite expression for what you would like.",
+        "Use me + the conditional of gustar.",
+        "The conditional form begins with gusta… and includes an accented í."
+      ]
+    },
+    {
+      "id": "own-request",
+      "tense": "conditional",
+      "type": "create",
+      "prompt": "Make a polite request using the conditional.",
+      "sample": "Me gustaría un vaso de agua.",
+      "hint": "Try me gustaría + a noun.",
+      "explanation": "Self-review: check the verb ending and the meaning."
+    }
+  ]
+}

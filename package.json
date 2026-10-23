@@ -1,0 +1,1 @@
+{"name":"frase-spanish-practice","private":true,"type":"module","scripts":{"check":"node --test tests/*.test.mjs"}}
