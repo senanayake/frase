@@ -1,3 +1,4 @@
+import {validateFocus} from './focus.js';
 export const STORAGE_KEY = 'frase.learning.v1';
 export const DAY = 86400000;
 export const TYPES = ['cloze', 'translate', 'transform', 'contrast', 'create'];
@@ -48,7 +49,7 @@ export function validateBackup(value) {
   settings.largeText=Boolean(settings.largeText);
   settings.practiceReferenceOpen=settings.practiceReferenceOpen===true;
   if(!Number.isInteger(settings.weeklyPracticeDays)||settings.weeklyPracticeDays<1||settings.weeklyPracticeDays>7)settings.weeklyPracticeDays=3;
-  return {...value,settings};
+  return {...value,settings,focus:validateFocus(value.focus)};
 }
 export function saveState(state,storage) { storage.setItem(STORAGE_KEY, JSON.stringify(state)); }
 export function recordAnswer(state, card, outcome, answer, now=Date.now()) {
