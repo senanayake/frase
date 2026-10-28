@@ -133,3 +133,13 @@ Focused records and sets travel with the existing notebook backup. Old backups r
 A round starts with 12 prompts. A supported recall or revealed model can add one extra retry per target after at least three intervening prompts; occasional bridge prompts preserve that gap. These retries are bounded, so a difficult round always ends.
 
 The design draws on [Kim & Webb (2022), spaced L2 practice](https://doi.org/10.1111/lang.12479), [Serfaty & Serrano (2024), grammar relearning](https://doi.org/10.1111/lang.12585), and [Pan et al. (2019), structured study and mixed conjugation practice](https://doi.org/10.1016/j.jarmac.2019.07.004). Six targets, 12 initial prompts and the review intervals are product choices rather than research-established optima.
+
+## Watch & Understand (v1.10)
+
+The **Watch** tab (`#watch`) adds nine curated Spanish After Hours videos across visual/repetition, everyday scenes and stories/stretch. Recommendations use the learner's optional **Easy / Mostly followed / Lost** feedback, not a CEFR assessment. Full videos are offered without forced quizzes or invented transcript segments. The shelf is based on verified creator titles/descriptions; exact audiovisual content, captions and timestamps have not been reviewed as lessons.
+
+The YouTube privacy-enhanced player loads only after **Load video** is pressed. An **Open on YouTube** link remains available if embedding fails. Loading connects to YouTube; captions, speed controls and playback availability are controlled by YouTube. No video content, captions, paid exercises or transcripts are copied. The creator uses Spain-based Spanish, offering variety alongside Frase's Latin American course.
+
+Watched marks, understanding ratings, the selected video and optional short phrase/scene notes are saved under `state.watch` within the existing `frase.learning.v1` notebook. Old backups receive an empty watch section. New backups include it automatically. This self-reported listening record does not change exercise records, spaced review, Focused targets, streaks or mastery. Watched marks and ratings can be undone. Opening a video never marks it completed. The player is left intact when saving ratings or notes; navigation away unloads it.
+
+Source metadata is in `dist/js/watch-catalog.js`; pure progress/recommendation logic is in `watch.js`; the view is `watch-ui.js`. `tests/watch.test.mjs` covers migration, round trips, separation from mastery, recommendations, data validation, escaped rendering and route integration.
